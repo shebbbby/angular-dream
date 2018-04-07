@@ -1,0 +1,17 @@
+<label for="changeServerName">Change Server Name</label>
+<input
+  class="form-control"
+  id="changeServerName"
+  type="text"
+  (input)="onUpdateServerName($event)">
+<hr>
+
+<button class="btn btn-primary"
+[disabled]="allowNewServer"
+(click)="onCreateServer()"
+(mouseover)="onCreateServer2()">HAHA</button>
+<p [innerText]="allowNewServer"></p>
+<p>{{ 'Server' }} with ID {{serverId}} is {{serverStatus}}</p>
+
+<p>Server Creation Status: {{serverCreationStatus}}</p>
+<p> Server Name: {{serverName}}</p>
